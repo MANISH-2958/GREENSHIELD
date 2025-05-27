@@ -1,0 +1,17 @@
+model Scan {
+  id                 String   @id @default(cuid())
+  imageUrl           String
+  disease            String
+  confidence         Float
+  description        String
+  symptoms           String
+  treatment          String
+  organicTreatment   String   @default("")
+  inorganicTreatment String   @default("")
+  createdAt          DateTime @default(now())
+  userId             String?
+}
+
+model User {
+  id String @id
+}
